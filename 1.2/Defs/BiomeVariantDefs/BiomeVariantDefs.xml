@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<Terrascape.BiomeVariantDef>
+		<defName>TS_BiomeDry</defName>  
+		<biomeVariantLabel>Dry</biomeVariantLabel>
+		<biomes>
+			
+		</biomes>      
+	</Terrascape.BiomeVariantDef>
+
+</Defs>

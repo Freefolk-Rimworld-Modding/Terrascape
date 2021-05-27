@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Realistic Planets - Fan Update</li>
+        </mods>
+        <match Class = "PatchOperationSequence">
+            <success>Always</success>
+            <operations>
+                <li Class = "PatchOperationAdd">
+                    <xpath>/Defs/Terrascape.BiomeVariantDef[defName="TS_BiomeSavanna"]/biomes</xpath>
+                    <value>
+                        <li>RRP_Savanna</li>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+
+</Patch>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Terrascape</name>
+	<author>Tidal</author>
+	<supportedVersions>
+		<li>1.2</li>
+	</supportedVersions>
+	<packageId>tidal.terrascape</packageId>
+	<description>A nature mod that brings a more immersive and detailed environment to your game by adding natural map features, new events, natural disasters, and more. Includes high quality retextures of several vanilla plants.</description>
+	<loadAfter>
+		<li>Ludeon.RimWorld</li>
+		<li>Ludeon.RimWorld.Royalty</li>
+		<li>mlie.xndnocturnalanimals</li>
+		<li>brrainz.harmony</li>
+	</loadAfter>
+</ModMetaData>
