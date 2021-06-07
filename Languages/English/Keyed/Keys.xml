@@ -1,8 +1,17 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
+
+  <!-- Settings -->
+  <TS_ModName>Terrascape</TS_ModName>
+  <TS_CheckboxMangroveSwamp>allow Mangrove Swamps</TS_CheckboxMangroveSwamp>
+  
+  <TS_CheckboxPlantRoots>allow certain plants to grow roots</TS_CheckboxPlantRoots>
+  <TS_CheckboxPlantRootsDesc>If unchecked, plants will not grow roots.</TS_CheckboxPlantRootsDesc>
+
   <NocturnalAnimals.BodyClock>Body clock</NocturnalAnimals.BodyClock>
   <NocturnalAnimals.BodyClock_Description>The creature's natural sleeping pattern.\n\nDiurnal creatures are awake during daytime, nocturnal creatures during nighttime, and crepuscular creatures during mornings and evenings.</NocturnalAnimals.BodyClock_Description>
   <NocturnalAnimals.BodyClock_Diurnal>Diurnal</NocturnalAnimals.BodyClock_Diurnal>
   <NocturnalAnimals.BodyClock_Nocturnal>Nocturnal</NocturnalAnimals.BodyClock_Nocturnal>
   <NocturnalAnimals.BodyClock_Crepuscular>Crepuscular</NocturnalAnimals.BodyClock_Crepuscular>
+
 </LanguageData>

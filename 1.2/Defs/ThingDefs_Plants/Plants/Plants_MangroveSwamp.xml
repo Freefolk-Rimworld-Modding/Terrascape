@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="TreeBase">
+    <defName>TS_RedMangroveTree</defName>
+    <label>red mangrove tree</label>
+    <description>A medium-size, salt-tolerant tree supported by a maze of prop roots.</description>
+    <graphicData>
+      <texPath>Things/Plant/TS_RedMangroveTree</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shadowData>
+        <volume>(0.2, 0.3, 0.13)</volume>
+        <offset>(0,0,-0.44)</offset>
+      </shadowData>
+    </graphicData>
+    <statBases>
+      <Beauty>1</Beauty>
+      <Nutrition>1.2</Nutrition>
+    </statBases>
+    <plant>
+      <growDays>20</growDays>
+      <harvestWork>800</harvestWork>
+      <harvestYield>24</harvestYield>
+      <wildClusterRadius>17</wildClusterRadius>
+      <wildClusterWeight>25</wildClusterWeight>
+      <visualSizeRange>1.5~2.3</visualSizeRange>
+    </plant>
+  </ThingDef>
+
+</Defs>

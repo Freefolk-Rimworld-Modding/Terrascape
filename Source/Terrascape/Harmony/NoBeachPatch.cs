@@ -18,9 +18,9 @@ namespace Terrascape
     {
         static bool Prefix(Map map)
         {
-            if (map.Biome.HasModExtension<MangrovesMap>())
+            if (map.Biome.HasModExtension<BiomeExtension>())
             {
-                if (map.Biome.GetModExtension<MangrovesMap>().customBeach)
+                if (map.Biome.GetModExtension<BiomeExtension>().customBeach)
                 {
                     return false;
                 }

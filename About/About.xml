@@ -6,7 +6,7 @@
 		<li>1.2</li>
 	</supportedVersions>
 	<packageId>tidal.terrascape</packageId>
-	<description>A nature mod that brings a more immersive and detailed environment to your game by adding natural map features, new events, natural disasters, and more. Includes high quality retextures of several vanilla plants.</description>
+	<description>A nature mod that brings a more immersive and detailed environment to your game by adding natural map features, new animals, new events, natural disasters, and more.</description>
 	<loadAfter>
 		<li>Ludeon.RimWorld</li>
 		<li>Ludeon.RimWorld.Royalty</li>

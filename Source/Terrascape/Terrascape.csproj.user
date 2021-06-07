@@ -3,4 +3,7 @@
   <PropertyGroup>
     <ProjectView>ProjectFiles</ProjectView>
   </PropertyGroup>
+  <PropertyGroup>
+    <ReferencePath>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\;C:\Program Files (x86)\Steam\steamapps\workshop\content\294100\2009463077\Current\Assemblies\</ReferencePath>
+  </PropertyGroup>
 </Project>

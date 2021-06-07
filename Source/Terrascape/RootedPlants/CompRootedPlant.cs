@@ -40,12 +40,14 @@ namespace Terrascape
 			return 0f;
 		}
 
+		// Adds progress, and tries to grow a root.
 		public void AddProgress(float progress)
 		{
 			progressToNewRoot += progress;
 			TryGrowRoot();
 		}
 
+		// Adds progress if the rooted plant is growing and doesn't yet have the max number of roots.
 		public override void CompTickLong()
 		{
 			Plant p = (Plant)parent;
@@ -55,6 +57,7 @@ namespace Terrascape
 			}
 		}
 
+		// Removes roots on despawn if set in properties, else tells the roots that their parent is dead. :(
 		public override void PostDeSpawn(Map map)
 		{
 			if (Props.removeOnDespawn)
@@ -74,6 +77,7 @@ namespace Terrascape
 			}
 		}
 
+		// Tries to grow a new root if there's enough progress.
 		private void TryGrowRoot()
 		{
 			while (progressToNewRoot >= 1f)
@@ -83,6 +87,7 @@ namespace Terrascape
 			}
 		}
 
+		// Grows a new root within a defined radius, with a choice between Wet or Dry terrain affordance.
 		public void GrowRoot()
 		{
 			int num = GenRadial.NumCellsInRadius(Props.rootGrowthRadius);
@@ -180,7 +185,7 @@ namespace Terrascape
 
 				// Adds a single long tick of progress if the number of roots is less than max roots
 				Command_Action command_Action2 = new Command_Action();
-				command_Action2.defaultLabel = "DEV: Add long tick of progress";
+				command_Action2.defaultLabel = "DEV: Add long tick of progress to next root";
 				command_Action2.action = delegate
 				{
 					if (!HasMaxRoots())
@@ -192,6 +197,7 @@ namespace Terrascape
 			}
 		}
 
+		// Save root progress and root list.
 		public override void PostExposeData()
 		{
 			Scribe_Values.Look(ref progressToNewRoot, "progressToNewRoot", 0f);

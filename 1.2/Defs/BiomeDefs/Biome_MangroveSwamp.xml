@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+ 
+  <BiomeDef>
+    <defName>TS_MangroveSwamp</defName>
+    <label>mangrove swamp</label>
+    <description>A dense swamp dominated by only a few varieties of salt-tolerant trees. This unique habitat is an excellent home for a staggering diversity of animal life, but may not be so welcoming for colonists looking to call it home.</description>
+    <workerClass>Terrascape.BiomeWorker_MangroveSwamp</workerClass>
+	  <modExtensions>
+      <li Class="Terrascape.BiomeExtension">
+        <IsMangroveSwamp>true</IsMangroveSwamp>
+        <customBeach>true</customBeach>
+		  </li>    
+	  </modExtensions>
+    
+    <animalDensity>6.5</animalDensity>
+    <plantDensity>0.99</plantDensity>
+    <settlementSelectionWeight>0.4</settlementSelectionWeight>
+    <movementDifficulty>5</movementDifficulty>
+    <texture>World/Biomes/MangroveSwamp</texture>
+    <forageability>0.75</forageability>
+    <foragedFood>RawBerries</foragedFood>
+    <wildPlantRegrowDays>13</wildPlantRegrowDays>
+    <soundsAmbient>
+      <li>Ambient_NightInsects_Jungle</li>
+      <li>Ambient_DayInsects_Jungle</li>
+    </soundsAmbient>
+    <diseaseMtbDays>30</diseaseMtbDays>
+    <diseases>
+      <li>
+        <diseaseInc>Disease_Malaria</diseaseInc>
+        <commonality>160</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_SleepingSickness</diseaseInc>
+        <commonality>140</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_Flu</diseaseInc>
+        <commonality>100</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_Plague</diseaseInc>
+        <commonality>100</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_GutWorms</diseaseInc>
+        <commonality>80</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_MuscleParasites</diseaseInc>
+        <commonality>80</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_FibrousMechanites</diseaseInc>
+        <commonality>30</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_SensoryMechanites</diseaseInc>
+        <commonality>30</commonality>
+      </li>
+      
+      <li>
+        <diseaseInc>Disease_AnimalFlu</diseaseInc>
+        <commonality>100</commonality>
+      </li>
+      <li>
+        <diseaseInc>Disease_AnimalPlague</diseaseInc>
+        <commonality>100</commonality>
+      </li>
+    </diseases>
+    <terrainsByFertility>
+	 <li>
+        <terrain>WaterOceanDeep</terrain>
+        <min>-999</min>
+        <max>-0.45</max>
+	 </li>
+	 <li>
+        <terrain>WaterOceanShallow</terrain>
+        <min>-0.45</min>
+        <max>0.05</max>
+	  </li>
+	  <li>
+	     <terrain>MarshyTerrain</terrain>
+        <min>0.05</min>
+        <max>0.20</max>
+      </li>
+	  <li>
+        <terrain>Soil</terrain>
+        <min>0.20</min>
+        <max>999</max>
+      </li>
+
+    </terrainsByFertility>
+
+    <terrainPatchMakers>
+      <li>
+        <perlinFrequency>0.015</perlinFrequency>
+		<minFertility>0.20</minFertility>
+        <thresholds>
+          <li>
+            <terrain>SoilRich</terrain>
+            <min>0.73</min>
+          </li>
+        </thresholds>
+      </li>
+    </terrainPatchMakers>
+
+    <baseWeatherCommonalities>
+      <Clear>18</Clear>
+      <Fog>1</Fog>
+      <Rain>2</Rain>
+      <DryThunderstorm>0.3</DryThunderstorm>
+      <RainyThunderstorm>1.7</RainyThunderstorm>
+      <FoggyRain>1</FoggyRain>
+      <SnowGentle>4</SnowGentle>
+      <SnowHard>4</SnowHard>
+    </baseWeatherCommonalities>
+    <wildPlants>
+      <Plant_TallGrass>4.8</Plant_TallGrass>
+      <Plant_ShrubLow>2.0</Plant_ShrubLow>
+      <TS_RedMangroveTree>1.72</TS_RedMangroveTree>
+      <Plant_Chokevine>0.8</Plant_Chokevine>
+      <Plant_Alocasia>0.8</Plant_Alocasia>
+      <Plant_Bush>0.15</Plant_Bush>
+      <Plant_Clivia>0.07</Plant_Clivia>
+      <Plant_Berry>0.05</Plant_Berry>
+    </wildPlants>
+    <wildAnimals>
+      <Rat>1.0</Rat>
+      <Deer>0.5</Deer>
+      <WildBoar>0.5</WildBoar>
+      <Raccoon>0.5</Raccoon>
+      <Tortoise>0.3</Tortoise>
+      <Cougar>0.07</Cougar>
+      <Capybara>0.5</Capybara>
+      <Elephant>0.1</Elephant>
+      <Monkey>1</Monkey>
+    </wildAnimals>
+    <allowedPackAnimals>
+      <li>Muffalo</li>
+      <li>Elephant</li>
+      <li>Alpaca</li>
+    </allowedPackAnimals>
+  </BiomeDef>
+
+
+</Defs>

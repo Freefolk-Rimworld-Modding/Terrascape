@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <!--
+  <EffecterDef>
+    <defName>SpawnFirefly</defName>
+    <children>
+      <li>
+        <subEffectorClass></subEffectorClass>
+      </li>
+    </children>
+  </EffecterDef>
+  
+  <ThingDef ParentName="MoteBase">
+    <defName>Mote_Firefly</defName>
+    <graphicData>
+      <texPath>Things/Mote/Mote_Firefly</texPath>
+    </graphicData>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <mote>  
+      <fadeInTime>0.05</fadeInTime>
+      <solidTime>0.08</solidTime>
+      <fadeOutTime>1</fadeOutTime>
+    </mote>
+  </ThingDef>
+-->
+</Defs>

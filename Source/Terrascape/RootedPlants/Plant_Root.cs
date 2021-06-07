@@ -31,6 +31,7 @@ namespace Terrascape
             }
         }
 
+		// If growsWithoutParent is false, roots will not continue to grow if their parent tree has despawned.
 		public override float GrowthRate
 		{
 			get

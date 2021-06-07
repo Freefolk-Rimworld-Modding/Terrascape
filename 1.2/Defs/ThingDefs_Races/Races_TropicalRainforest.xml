@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!-- ========================== Ocelot ================================= -->
+
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>TS_Ocelot</defName>
+    <label>ocelot</label>
+    <description>A reclusive wildcat with a spotted coat. It prowls densely-forested areas as night falls, stalking a wide variety of small prey through the shadows.</description>
+    <statBases>
+      <MoveSpeed>4.3</MoveSpeed>
+      <MarketValue>100</MarketValue>
+      <ComfyTemperatureMin>0</ComfyTemperatureMin>
+      <ComfyTemperatureMax>50</ComfyTemperatureMax>
+    </statBases>
+	<comps>
+		<li Class="AnimalBehaviours.CompProperties_DigWhenHungry">
+			<customThingsToDig>
+				<li>Meat_Rabbit</li>
+				<li>Meat_Rat</li>
+			</customThingsToDig>
+			<customAmountToDig>10</customAmountToDig>
+			<spawnForbidden>true</spawnForbidden>
+		</li>
+	</comps>
+     <tools>
+      <li>
+        <label>left claw</label>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.5</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>14</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>right claw</label>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.5</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>14</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>0.7</chanceFactor>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>14</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>6</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+    <race>
+      <body>QuadrupedAnimalWithPawsAndTail</body>
+      <herdAnimal>false</herdAnimal>
+      <predator>true</predator>
+      <maxPreyBodySize>0.75</maxPreyBodySize>
+      <baseBodySize>0.8</baseBodySize>
+      <baseHungerRate>0.19</baseHungerRate>
+      <baseHealthScale>0.8</baseHealthScale>
+      <foodType>CarnivoreAnimal, OvivoreAnimal</foodType>
+      <leatherDef>Leather_Panthera</leatherDef>
+      <wildness>0.80</wildness>
+      <manhunterOnTameFailChance>0.10</manhunterOnTameFailChance>
+      <manhunterOnDamageChance>0.10</manhunterOnDamageChance>
+      <gestationPeriodDays>15</gestationPeriodDays>
+      <lifeExpectancy>20</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.2</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.4</minAge>
+          <soundWounded>Pawn_Cougar_Injured</soundWounded>
+          <soundDeath>Pawn_Cougar_Death</soundDeath>
+          <soundAngry>Pawn_Cougar_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+    </race>
+    <tradeTags>
+      <li>AnimalExotic</li>
+	    <li>AnimalFighter</li>
+    </tradeTags>
+    <modExtensions>
+      <li Class="NocturnalAnimals.ExtendedRaceProperties">
+        <bodyClock>Nocturnal</bodyClock>
+      </li>
+    </modExtensions>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>TS_Ocelot</defName>
+    <label>ocelot</label>
+    <labelPlural>ocelots</labelPlural>
+    <race>TS_Ocelot</race>
+    <combatPower>35</combatPower>
+    <ecoSystemWeight>0.30</ecoSystemWeight>
+    <wildGroupSize>3~7</wildGroupSize>
+    <lifeStages>
+      <li>
+	  	<label>ocelot kitten</label>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Ocelot/Ocelot</texPath>
+          <drawSize>1.1</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Ocelot/Dessicated_Ocelot</texPath>
+          <drawSize>1.1</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Ocelot/Ocelot</texPath>
+          <drawSize>1.4</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.3)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Ocelot/Dessicated_Ocelot</texPath>
+          <drawSize>1.4</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Ocelot/Ocelot</texPath>
+          <drawSize>1.6</drawSize>
+          <shadowData>
+            <volume>(0.3, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.1)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Ocelot/Dessicated_Ocelot</texPath>
+          <drawSize>1.6</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+	<!-- ========================== Giant Anteater ================================= -->
+
+	<ThingDef ParentName="AnimalThingBase">
+		<defName>TS_GiantAnteater</defName>
+		<label>giant anteater</label>
+		<tickerType>Normal</tickerType>
+		<description>Giant anteaters are large, solitary insectivores that forage in open areas and rest in more wooded habitats. They walk on their knuckles due to their long, enlarged fore claws, which are as useful for digging up insects as they are for self-defense.</description>
+		<statBases>
+			<MoveSpeed>3</MoveSpeed>
+			<MarketValue>300</MarketValue>
+			<ComfyTemperatureMin>0</ComfyTemperatureMin>
+			<ComfyTemperatureMax>50</ComfyTemperatureMax>
+		</statBases>
+		<tools>
+			<li>
+				<label>left claw</label>
+				<capacities>
+					<li>Scratch</li>
+					<li>Stab</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>right claw</label>
+				<capacities>
+					<li>Scratch</li>
+					<li>Stab</li>
+				</capacities>
+				<power>12</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+			</li>			
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>7</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.05</chanceFactor>
+			</li>
+		</tools>
+    <comps>
+      <li Class="AnimalBehaviours.CompProperties_AutoNutrition">
+        <tickInterval>2000</tickInterval>
+        <consumingFoodReportString>Eating ants</consumingFoodReportString>		
+      </li>
+    </comps>
+		<race>
+			<body>QuadrupedAnimalWithPawsAndTail</body>
+			<herdAnimal>false</herdAnimal>
+			<baseBodySize>1.2</baseBodySize>
+			<baseHungerRate>0.3</baseHungerRate>
+			<baseHealthScale>1.2</baseHealthScale>
+			<foodType>VegetarianRoughAnimal</foodType>
+			<leatherDef>Leather_Light</leatherDef>
+			<wildness>0.75</wildness>			
+			<gestationPeriodDays>45</gestationPeriodDays>
+			<lifeExpectancy>16</lifeExpectancy>
+			<lifeStageAges>
+				<li>
+					<def>AnimalBaby</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>AnimalJuvenile</def>
+					<minAge>0.35</minAge>
+				</li>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0.83</minAge>
+
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+		</race>
+		<tradeTags>
+			<li>AnimalExotic</li>
+		</tradeTags>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>TS_GiantAnteater</defName>
+		<label>giant anteater</label>
+		<labelPlural>giant anteaters</labelPlural>
+		<race>TS_GiantAnteater</race>
+		<combatPower>140</combatPower>
+		<ecoSystemWeight>0.35</ecoSystemWeight>
+		
+		<lifeStages>
+			<li>
+				<label>giant anteater pup</label>
+				<labelPlural>giant anteater pups</labelPlural>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/GiantAnteater/GiantAnteater</texPath>
+					<drawSize>1</drawSize>
+					
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/GiantAnteater/Dessicated_GiantAnteater</texPath>
+					<drawSize>1</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/GiantAnteater/GiantAnteater</texPath>
+					<drawSize>1.5</drawSize>
+					
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/GiantAnteater/Dessicated_GiantAnteater</texPath>
+					<drawSize>1.5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/GiantAnteater/GiantAnteater</texPath>
+					<drawSize>2.5</drawSize>
+					
+					<shadowData>
+						<volume>(0.35, 0.4, 0.3)</volume>
+						<offset>(0,0,-0.08)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/GiantAnteater/Dessicated_GiantAnteater</texPath>
+					<drawSize>2.5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+	<!-- ========================== Coati ================================= -->
+
+  <ThingDef ParentName="AnimalThingBase">
+    <defName>TS_Coati</defName>
+    <label>coati</label>
+    <description>A jungle-dwelling relative of the raccoon. Coatis spend the day foraging in a large group, or band, using their flexible noses to root out food. Their long tails are used for both communication and balance.</description>
+    <statBases>
+      <MoveSpeed>4.1</MoveSpeed>
+      <MarketValue>100</MarketValue>
+      <ComfyTemperatureMin>0</ComfyTemperatureMin>
+    </statBases>
+    <uiIconScale>1.15</uiIconScale>
+    <tools>
+      <li>
+        <label>left claw</label>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>6</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>right claw</label>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>6</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>0.7</chanceFactor>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>3</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+    <race>
+      <body>QuadrupedAnimalWithPawsAndTail</body>
+      <baseBodySize>0.30</baseBodySize>
+      <baseHealthScale>0.4</baseHealthScale>
+      <baseHungerRate>0.32</baseHungerRate>
+      <foodType>OmnivoreRoughAnimal</foodType>
+      <leatherDef>Leather_Light</leatherDef>
+      <wildness>0.75</wildness>
+      <mateMtbHours>8</mateMtbHours>
+      <gestationPeriodDays>14</gestationPeriodDays>
+      <manhunterOnTameFailChance>0.02</manhunterOnTameFailChance>
+      <wildBiomes>
+				<TropicalRainforest>1</TropicalRainforest>
+				<TropicalSwamp>0.5</TropicalSwamp>
+			</wildBiomes>
+      <litterSizeCurve>
+        <points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(2, 1)</li>
+          <li>(2.5, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeExpectancy>12</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.15</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.4</minAge>
+          <soundWounded>Pawn_Boomrat_Wounded</soundWounded>
+          <soundDeath>Pawn_Boomrat_Death</soundDeath>
+          <soundCall>Pawn_Boomrat_Call</soundCall>
+          <soundAngry>Pawn_Boomrat_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+    </race>
+    <tradeTags>
+      <li>AnimalUncommon</li>
+    </tradeTags>
+  </ThingDef>
+
+  <PawnKindDef ParentName="AnimalKindBase">
+    <defName>TS_Coati</defName>
+    <label>coati</label>
+    <labelPlural>coatis</labelPlural>
+    <race>TS_Coati</race>
+    <combatPower>33</combatPower>
+    <ecoSystemWeight>0.30</ecoSystemWeight>
+    <wildGroupSize>3~8</wildGroupSize>
+    <alternateGraphicChance>1</alternateGraphicChance>
+    <alternateGraphics>
+      <li>
+        <color>(127,107,80)</color>
+        <colorTwo>(130,96,56)</colorTwo>
+      </li>
+      <li>
+        <color>(175,121,93)</color>
+        <colorTwo>(124,77,61)</colorTwo>
+      </li>
+      <li>
+        <color>(181,163,133)</color>
+        <colorTwo>(141,104,59)</colorTwo>
+      </li>
+      <li>
+        <color>(185,150,112)</color>
+        <colorTwo>(142,98,58)</colorTwo>
+      </li>
+      <li>
+        <color>(160,104,66)</color>
+        <colorTwo>(137,79,40)</colorTwo>
+      </li>
+    </alternateGraphics>
+    <lifeStages>
+      <li>
+        <label>coati kit</label>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Coati/CoatiKit</texPath>
+          <drawSize>1.1</drawSize>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Coati/Dessicated_Coati</texPath>
+          <drawSize>1</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Coati/Coati</texPath>
+          <color>(175,141,100)</color>          
+          <colorTwo>(181,163,133)</colorTwo>
+          <drawSize>1.3</drawSize>
+          <shaderType>CutoutComplex</shaderType>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Coati/Dessicated_Coati</texPath>
+          <drawSize>1.2</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animal/Coati/Coati</texPath>
+          <color>(175,141,100)</color>          
+          <colorTwo>(181,163,133)</colorTwo>
+          <drawSize>1.6</drawSize>
+          <shaderType>CutoutComplex</shaderType>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Coati/Dessicated_Coati</texPath>
+          <drawSize>1.5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+	<!-- ========================== Coati ================================= -->
+
+	<ThingDef ParentName="AnimalThingBase">
+		<defName>TS_LandSnail</defName>
+		<label>giant land snail</label>
+		<description>A large, herbivorous mollusc with a patterned shell reminiscent of a tiger's stripes. Their beautiful patterns, impressive sizes, and hardy natures have led them to be bred on some worlds for both food and fashion.</description>
+		<statBases>
+			<MoveSpeed>0.5</MoveSpeed>
+			<MarketValue>12</MarketValue>
+			<ComfyTemperatureMin>0</ComfyTemperatureMin>
+		</statBases>
+		<tools>
+			<li>
+				<capacities>
+					<li>Scratch</li>
+				</capacities>
+				<power>3</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>TS_RadulaAttackTool</linkedBodyPartsGroup>
+				<chanceFactor>0.9</chanceFactor>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>3</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.1</chanceFactor>
+			</li>
+		</tools>
+    <comps>
+      <li Class="CompProperties_EggLayer">
+        <eggFertilizedDef>EggLandSnailFertilized</eggFertilizedDef>
+        <eggFertilizationCountMax>1</eggFertilizationCountMax>
+        <eggLayIntervalDays>7</eggLayIntervalDays>
+        <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
+        <eggCountRange>1</eggCountRange>
+      </li>
+    </comps>
+		<race>
+      <hasGenders>false</hasGenders>
+			<body>LandSnail</body>
+			<baseBodySize>0.2</baseBodySize>
+			<baseHealthScale>0.5</baseHealthScale>
+			<baseHungerRate>0.2</baseHungerRate>
+			<foodType>VegetarianRoughAnimal</foodType>
+			<wildness>0.4</wildness>
+			<petness>0.15</petness>
+			<nuzzleMtbHours>80</nuzzleMtbHours>
+			<trainability>None</trainability>
+			<gestationPeriodDays>12</gestationPeriodDays>
+      <meatLabel>snail meat</meatLabel>
+			<litterSizeCurve>
+				<points>
+					<li>(0.5, 0)</li>
+					<li>(1, 1)</li>
+					<li>(2, 1)</li>
+					<li>(2.5, 0)</li>
+				</points>
+			</litterSizeCurve>
+			<wildBiomes>
+				<TropicalRainforest>1</TropicalRainforest>
+				<TropicalSwamp>0.75</TropicalSwamp>
+        <TemperateSwamp>0.3</TemperateSwamp>
+				<AridShrubland>0.1</AridShrubland>
+			</wildBiomes>
+			<lifeExpectancy>7</lifeExpectancy>
+			<lifeStageAges>
+				<li>
+					<def>AnimalBaby</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>AnimalJuvenile</def>
+					<minAge>0.15</minAge>
+				</li>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0.25</minAge>
+					<soundWounded>Pawn_LandSnail_Wounded</soundWounded>
+					<soundDeath>Pawn_LandSnail_Death</soundDeath>
+					<soundCall>Pawn_LandSnail_Call</soundCall>
+					<soundAngry>Pawn_LandSnail_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+		</race>
+		<tradeTags>
+			<li>AnimalUncommon</li>
+		</tradeTags>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>TS_LandSnail</defName>
+		<label>giant land snail</label>
+		<race>TS_LandSnail</race>
+		<combatPower>10</combatPower>
+		<ecoSystemWeight>0.1</ecoSystemWeight>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/LandSnail/LandSnailBaby</texPath>					
+					<drawSize>0.4</drawSize>					
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/LandSnail/Dessicated_LandSnailBaby</texPath>
+					<drawSize>0.4</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/LandSnail/LandSnail</texPath>					
+
+					<drawSize>0.6</drawSize>
+
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/LandSnail/Dessicated_LandSnail</texPath>
+					<drawSize>0.6</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animal/LandSnail/LandSnail</texPath>					
+
+					<drawSize>0.75</drawSize>
+
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/LandSnail/Dessicated_LandSnail</texPath>
+					<drawSize>0.75</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+</Defs>

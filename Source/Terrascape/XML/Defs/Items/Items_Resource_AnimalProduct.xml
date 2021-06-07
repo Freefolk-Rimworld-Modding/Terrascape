@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="EggFertBase">
+    <defName>EggLandSnailFertilized</defName>
+    <label>giant land snail egg (fert.)</label>
+    <description>A fertilized giant land snail egg. If all goes well, it should hatch into a baby giant land snail. It can be eaten raw, but it's much better cooked.</description>
+    <graphicData>
+      <color>(241,242,211)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>3.5</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Hatcher">
+        <hatcherDaystoHatch>4.5</hatcherDaystoHatch>
+        <hatcherPawn>TS_LandSnail</hatcherPawn>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>
