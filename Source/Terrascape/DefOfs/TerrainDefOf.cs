@@ -12,12 +12,12 @@ using UnityEngine;
 namespace Terrascape
 {
     [DefOf]
-    public class TerrascapeDefOf
+    public class TerrainDefOf
     {
         public static TerrainDef Mud;
-        static TerrascapeDefOf()
+        static TerrainDefOf()
         {
-            DefOfHelper.EnsureInitializedInCtor(typeof(TerrascapeDefOf));
+            DefOfHelper.EnsureInitializedInCtor(typeof(TerrainDefOf));
         }
     }
 }

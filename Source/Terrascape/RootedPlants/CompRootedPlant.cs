@@ -102,7 +102,7 @@ namespace Terrascape
                     switch (Props.rootType)
                     {
 						case "Wet":
-							if (terrain != null && (terrain.IsWater || terrain == TerrascapeDefOf.Mud || parent.Map.fertilityGrid.FertilityAt(c) >= Props.root.plant?.fertilityMin))
+							if (terrain != null && (terrain.IsWater || terrain == TerrainDefOf.Mud || parent.Map.fertilityGrid.FertilityAt(c) >= Props.root.plant?.fertilityMin))
 							{
 								List<Thing> list = parent.Map.thingGrid.ThingsListAt(c);
 								foreach (Thing item in list)
