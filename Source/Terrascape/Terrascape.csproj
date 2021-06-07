@@ -61,10 +61,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ModExtension_Plant_BiomeDependent.cs" />
-    <Compile Include="BiomeVariantDef.cs" />
-    <Compile Include="Plant_BiomeDependent.cs" />
+    <Compile Include="Biomes\MangroveSwamp\BiomeWorker_Mangroves.cs" />
+    <Compile Include="Harmony\MangroveMapPatch.cs" />
+    <Compile Include="Harmony\HarmonyPatchAll.cs" />
+    <Compile Include="Biomes\MangroveSwamp\MangrovesMap.cs" />
+    <Compile Include="Harmony\NoBeachPatch.cs" />
+    <Compile Include="RootedPlants\CompRootedPlant.cs" />
+    <Compile Include="RootedPlants\GenStep_RootedPlants.cs" />
+    <Compile Include="RootedPlants\ModExtension_Root.cs" />
+    <Compile Include="RootedPlants\Plant_Root.cs" />
+    <Compile Include="TerrascapeDefOf.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

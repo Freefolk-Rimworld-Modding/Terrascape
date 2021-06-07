@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+
+    <Operation Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+            <li Class = "PatchOperationConditional">
+                <xpath>/Defs/ThingDef[defName="Plant_TreeCypress"]/comps</xpath>
+                <match Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="Plant_TreeCypress"]/comps</xpath>
+                    <value>
+                        <li Class="Terrascape.CompProperties_RootedPlant">
+                            <root>Root_TreeCypress</root>
+                            <maxRoots>4</maxRoots>
+                            <rootGrowthRadius>2</rootGrowthRadius>
+                            <rootType>Wet</rootType>
+                        </li>
+                    </value>
+                </match>
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>/Defs/ThingDef[defName="Plant_TreeCypress"]</xpath>
+                    <value>
+                        <comps>
+                            <li Class="Terrascape.CompProperties_RootedPlant">
+                                <root>Root_TreeCypress</root>
+                                <maxRoots>4</maxRoots>
+                                <rootGrowthRadius>2</rootGrowthRadius>
+                                <rootType>Wet</rootType>
+                            </li>
+                        </comps>
+                    </value>
+                </nomatch>
+            </li>
+        </operations>
+    </Operation>
+
+</Patch>
