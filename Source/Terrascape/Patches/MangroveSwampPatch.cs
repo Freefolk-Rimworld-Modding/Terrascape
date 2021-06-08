@@ -15,13 +15,16 @@ namespace Terrascape
     {
         static void Postfix(Map map, GenStepParams parms)
         {
-            if (map.Biome.HasModExtension<BiomeExtension>())
+            if(!map.Biome.HasModExtension<BiomeExtension>())
             {
-                if (!map.Biome.GetModExtension<BiomeExtension>().IsMangroveSwamp)
-                {
-                    return;
-                }
+                return;
             }
+
+            if (!map.Biome.GetModExtension<BiomeExtension>().IsMangroveSwamp)
+            {
+                return;
+            }
+
 
             MapGenFloatGrid fertility = MapGenerator.Fertility;
 

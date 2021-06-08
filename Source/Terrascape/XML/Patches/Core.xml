@@ -10,7 +10,7 @@
                     <xpath>/Defs/ThingDef[defName="Plant_TreeCypress"]/comps</xpath>
                     <value>
                         <li Class="Terrascape.CompProperties_RootedPlant">
-                            <root>Root_Cypress</root>
+                            <root>TS_Root_Cypress</root>
                             <maxRoots>4</maxRoots>
                             <rootGrowthRadius>2</rootGrowthRadius>
                             <rootType>Wet</rootType>
@@ -22,7 +22,7 @@
                     <value>
                         <comps>
                             <li Class="Terrascape.CompProperties_RootedPlant">
-                                <root>Root_Cypress</root>
+                                <root>TS_Root_Cypress</root>
                                 <maxRoots>4</maxRoots>
                                 <rootGrowthRadius>2</rootGrowthRadius>
                                 <rootType>Wet</rootType>
@@ -31,6 +31,12 @@
                     </value>
                 </nomatch>
             </li>
+          <li Class="PatchOperationAdd">
+            <xpath>/Defs/MapGeneratorDef[@Name="MapCommonBase"]/genSteps</xpath>
+            <value>
+              <li>TS_RootedPlants</li>
+            </value>
+          </li>
         </operations>
     </Operation>
 
