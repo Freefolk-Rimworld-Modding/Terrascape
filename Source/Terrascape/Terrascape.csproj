@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Biomes\BiomeWorker_TemperateRainforest.cs" />
     <Compile Include="Biomes\BiomeWorker_MangroveSwamp.cs" />
     <Compile Include="Terrascape_Mod.cs" />
     <Compile Include="Terrascape_Settings.cs" />
@@ -80,6 +81,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="XML\Defs\TerrainDefs\Terrain_Natural.xml" />
+    <Content Include="XML\Defs\BiomeDefs\Biome_TemperateRainforest.xml" />
     <Content Include="XML\Defs\BiomeDefs\Biome_MangroveSwamp.xml" />
     <Content Include="XML\Defs\Bodies\Snail_Bodies.xml" />
     <Content Include="XML\Defs\Bodies\Snail_BodyPartGroups.xml" />

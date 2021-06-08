@@ -16,6 +16,8 @@ namespace Terrascape
 
 		public static bool spawnMangroveSwamp = true;
 
+		public static bool spawnTemperateRainforest = true;
+
 		// Natural Objects
 
 		public static bool spawnInsectNests = true;
@@ -46,8 +48,6 @@ namespace Terrascape
 
 		public static bool eventHurricane = true;
 
-		public static bool eventMonsoon = true;
-
 		public static bool eventRedTide = true;
 
 		public static bool eventFishMigration = true;
@@ -60,6 +60,7 @@ namespace Terrascape
 		public override void ExposeData()
 		{
 			Scribe_Values.Look(ref spawnMangroveSwamp, "spawnMangroveSwamp", defaultValue: true);
+			Scribe_Values.Look(ref spawnTemperateRainforest, "spawnTemperateRainforest", defaultValue: true);
 		}
 	}	
 }

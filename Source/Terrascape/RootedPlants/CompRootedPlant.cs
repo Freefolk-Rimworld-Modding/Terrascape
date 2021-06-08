@@ -220,7 +220,7 @@ namespace Terrascape
 		// The radius the roots will grow in.
 		public float rootGrowthRadius;
 
-		// The number of days it takes a new root to grow
+		// The number of days it takes a new root to grow (with continuous growth)
 		public float growthCycleDays = 5f;
 
 		// If true, will remove all roots when the parent despawns.

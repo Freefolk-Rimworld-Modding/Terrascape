@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <GenStepDef>
+  <!--<GenStepDef>
     <defName>RootedPlants</defName>
     <order>801</order>
     <genStep Class="Terrascape.GenStep_RootedPlants"/>
-  </GenStepDef>
+  </GenStepDef>-->
 
 </Defs>

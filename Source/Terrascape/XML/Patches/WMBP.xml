@@ -13,7 +13,7 @@
           <forested>true</forested>
           <uniqueHills>true</uniqueHills>
           <materialRandomRotation>false</materialRandomRotation>
-          <forestDenseAbove>1800</forestDenseAbove>
+          <forestDenseAbove>1200</forestDenseAbove>
           <smallHillSizeMultiplier>1.5</smallHillSizeMultiplier>
           <largeHillSizeMultiplier>2</largeHillSizeMultiplier>
           <mountainSizeMultiplier>1.4</mountainSizeMultiplier>

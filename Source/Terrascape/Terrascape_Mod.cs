@@ -26,6 +26,7 @@ namespace Terrascape
 			Listing_Standard listing_Standard = new Listing_Standard();
 			listing_Standard.Begin(inRect);
 			listing_Standard.CheckboxLabeled("TS_CheckboxMangroveSwamp".Translate(), ref Terrascape_Settings.spawnMangroveSwamp);
+			listing_Standard.CheckboxLabeled("TS_CheckboxTemperateRainforest".Translate(), ref Terrascape_Settings.spawnTemperateRainforest);
 			listing_Standard.GapLine();
 			listing_Standard.CheckboxLabeled("TS_CheckboxPlantRoots".Translate(), ref Terrascape_Settings.spawnPlantRoots, "TS_CheckboxPlantRootsDesc".Translate());
 			listing_Standard.End();
