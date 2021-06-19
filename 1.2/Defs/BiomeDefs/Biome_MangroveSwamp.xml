@@ -118,6 +118,7 @@
       <SnowHard>4</SnowHard>
     </baseWeatherCommonalities>
     <wildPlants>
+      <TS_NipaPalmTree>0.2</TS_NipaPalmTree>
       <Plant_Grass>2.0</Plant_Grass>
       <Plant_TallGrass>4.8</Plant_TallGrass>
       <Plant_ShrubLow>2.0</Plant_ShrubLow>

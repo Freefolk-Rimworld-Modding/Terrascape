@@ -5,8 +5,9 @@
     <defName>TS_RedMangroveTree</defName>
     <label>red mangrove tree</label>
     <description>A medium-size, salt-tolerant tree supported by a maze of prop roots.</description>
+    <selectable>true</selectable>
     <graphicData>
-      <texPath>Things/Plant/TS_RedMangroveTree</texPath>
+      <texPath>Things/Plant/Trees/TS_TreeRedMangrove</texPath>
       <graphicClass>Graphic_Random</graphicClass>
       <shadowData>
         <volume>(0.2, 0.3, 0.13)</volume>
@@ -24,6 +25,42 @@
       <wildClusterRadius>17</wildClusterRadius>
       <wildClusterWeight>25</wildClusterWeight>
       <visualSizeRange>1.5~2.3</visualSizeRange>
+    </plant>
+  </ThingDef>
+
+  <ThingDef ParentName="TreeBase">
+    <defName>TS_NipaPalmTree</defName>
+    <label>nipa palm tree</label>
+    <description>A palm tree with leaves that seem to sprout from the ground, found around brackish water. It produces sweet fruit year-round.</description>
+    <graphicData>
+      <texPath>Things/Plant/Trees/TS_TreeNipaPalm</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shadowData>
+        <volume>(0.2, 0.3, 0.13)</volume>
+        <offset>(0,0,-0.44)</offset>
+      </shadowData>
+    </graphicData>
+    <selectable>true</selectable>
+    <statBases>
+      <Beauty>1</Beauty>
+      <Nutrition>1.2</Nutrition>
+    </statBases>
+    <plant>
+      <growDays>14</growDays>
+      <harvestWork>800</harvestWork>
+      <sowTags>
+        <li>Ground</li>
+      </sowTags>
+      <mustBeWildToSow>true</mustBeWildToSow>
+      <harvestTag>Standard</harvestTag>
+      <harvestYield>5</harvestYield>
+      <harvestedThingDef>TS_RawNipaFruit</harvestedThingDef>
+      <harvestFailable>true</harvestFailable>
+      <harvestAfterGrowth>0.20</harvestAfterGrowth>
+      <wildClusterRadius>6</wildClusterRadius>
+      <wildClusterWeight>200</wildClusterWeight>
+      <visualSizeRange>0.8~2.0</visualSizeRange>
+      <immatureGraphicPath>Things/Plant/Trees/TS_TreeNipaPalm_Immature</immatureGraphicPath>
     </plant>
   </ThingDef>
 

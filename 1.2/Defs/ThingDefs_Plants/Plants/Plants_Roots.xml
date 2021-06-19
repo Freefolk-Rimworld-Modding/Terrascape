@@ -12,7 +12,7 @@
             <Nutrition>0.3</Nutrition>
         </statBases>
         <graphicData>
-            <texPath>Things/Plant/Root_Cypress</texPath>
+            <texPath>Things/Plant/Roots/Root_Cypress</texPath>
             <graphicClass>Graphic_Random</graphicClass>
         </graphicData>
         <passability>PassThroughOnly</passability>
@@ -36,7 +36,7 @@
             <harvestedThingDef>WoodLog</harvestedThingDef>
             <harvestYield>1</harvestYield>
             <harvestTag>Wood</harvestTag>
-            <maxMeshCount>1</maxMeshCount>
+            <maxMeshCount>4</maxMeshCount>
             <visualSizeRange>0.3~0.5</visualSizeRange>
             <topWindExposure>0.25</topWindExposure>
             <wildOrder>3</wildOrder>

@@ -12,11 +12,17 @@ namespace Terrascape
 {
 	public class Terrascape_Settings : ModSettings
 	{
-		// Biomes
+		// Biomes and Mapgen
 
 		public static bool spawnMangroveSwamp = true;
 
 		public static bool spawnTemperateRainforest = true;
+
+		public static bool spawnXericShrubland = true;
+
+		public static bool spawnFleshPit = true;
+
+		public static bool geothermalVariation = true;
 
 		// Natural Objects
 
@@ -24,19 +30,15 @@ namespace Terrascape
 
 		public static bool spawnPlantRoots = true;
 
-		public static bool spawnFireflies = true;
-
 		public static bool spawnBoulders = true;
 
 		public static bool spawnLogs = true;
 
-		public static bool treeCanopy = true;
-
 		public static bool spawnTidepools = true;
 
-		public static bool beachDebris = true;
+		public static bool treeCanopy = true;
 
-		public static bool geothermalVariation = true;
+		public static bool beachDebris = true;
 
 		// Weather
 
@@ -45,6 +47,8 @@ namespace Terrascape
 		public static bool ashDuringVolcanicWinter = true;
 
 		// Incidents
+
+		public static bool eventFireflies = true;
 
 		public static bool eventHurricane = true;
 
@@ -56,11 +60,17 @@ namespace Terrascape
 
 		public static bool eventBeaching = true;
 
+		// Animal Tweaks
+
+		public static bool enablePredatorHealing = true;
 
 		public override void ExposeData()
 		{
 			Scribe_Values.Look(ref spawnMangroveSwamp, "spawnMangroveSwamp", defaultValue: true);
 			Scribe_Values.Look(ref spawnTemperateRainforest, "spawnTemperateRainforest", defaultValue: true);
+			Scribe_Values.Look(ref spawnXericShrubland, "spawnXericShrubland", defaultValue: true);
+			Scribe_Values.Look(ref spawnFleshPit, "spawnFleshPit", defaultValue: true);
+			Scribe_Values.Look(ref enablePredatorHealing, "enablePredatorHealing", defaultValue: true);
 		}
 	}	
 }

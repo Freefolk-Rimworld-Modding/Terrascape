@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
+  <!--=========================== Animals ===========================-->
+  
+  <!-- Tiger Snail -->
+  
   <SoundDef>
-    <defName>Pawn_LandSnail_Angry</defName>  
+    <defName>TS_Pawn_TigerSnail_Angry</defName>  
     <context>MapOnly</context>  
     <subSounds>
       <li>
         <grains>
           <li Class="AudioGrain_Folder">
-            <clipFolderPath>Pawn/Animal/LandSnail/LandSnail_Angry</clipFolderPath>
+            <clipFolderPath>Pawn/Animal/TigerSnail/TigerSnail_Angry</clipFolderPath>
           </li>
         </grains>      
         <volumeRange>15~15</volumeRange>      
@@ -20,13 +24,13 @@
   </SoundDef>
 
   <SoundDef>
-    <defName>Pawn_LandSnail_Call</defName>  
+    <defName>TS_Pawn_TigerSnail_Call</defName>  
     <context>MapOnly</context>  
     <subSounds>
       <li>
         <grains>
           <li Class="AudioGrain_Folder">
-            <clipFolderPath>Pawn/Animal/LandSnail/LandSnail_Call</clipFolderPath>
+            <clipFolderPath>Pawn/Animal/TigerSnail/TigerSnail_Call</clipFolderPath>
           </li>
         </grains>      
         <volumeRange>10~12</volumeRange>      
@@ -39,13 +43,13 @@
 
 
   <SoundDef>
-    <defName>Pawn_LandSnail_Wounded</defName>
+    <defName>TS_Pawn_TigerSnail_Wounded</defName>
     <context>MapOnly</context>
     <subSounds>
       <li>
         <grains>
           <li Class="AudioGrain_Folder">
-            <clipFolderPath>Pawn/Animal/LandSnail/LandSnail_Pain</clipFolderPath>
+            <clipFolderPath>Pawn/Animal/TigerSnail/TigerSnail_Pain</clipFolderPath>
           </li>
         </grains>
         <volumeRange>10~10</volumeRange>
@@ -56,13 +60,13 @@
   </SoundDef>
 
   <SoundDef>
-    <defName>Pawn_LandSnail_Death</defName>
+    <defName>TS_Pawn_TigerSnail_Death</defName>
     <context>MapOnly</context>
     <subSounds>
       <li>
         <grains>
           <li Class="AudioGrain_Folder">
-            <clipFolderPath>Pawn/Animal/LandSnail/LandSnail_Death</clipFolderPath>
+            <clipFolderPath>Pawn/Animal/TigerSnail/TigerSnail_Death</clipFolderPath>
           </li>
         </grains>
         <volumeRange>10~10</volumeRange>
@@ -72,4 +76,25 @@
     </subSounds>
 
   </SoundDef>
+
+  <!-- Quail -->
+
+  <SoundDef>
+    <defName>TS_Pawn_Quail_Call</defName>
+    <context>MapOnly</context>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Pawn/Animal/Quail/Quail_Call</clipFolderPath>
+          </li>
+        </grains>
+        <volumeRange>20~28</volumeRange>
+        <pitchRange>0.9770588~1.137647</pitchRange>
+        <distRange>0~50.40025</distRange>
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
 </Defs>

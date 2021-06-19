@@ -2,8 +2,8 @@
 <Defs>
 
   <BodyDef>
-    <defName>LandSnail</defName>
-    <label>land snail</label>
+    <defName>TS_Snail</defName>
+    <label>snail</label>
     <corePart>
       <def>TurtleShell</def>
       <height>Top</height>

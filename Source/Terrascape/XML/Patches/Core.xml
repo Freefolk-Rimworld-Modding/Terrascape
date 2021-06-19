@@ -11,8 +11,8 @@
                     <value>
                         <li Class="Terrascape.CompProperties_RootedPlant">
                             <root>TS_Root_Cypress</root>
-                            <maxRoots>4</maxRoots>
-                            <rootGrowthRadius>2</rootGrowthRadius>
+                            <maxRoots>2</maxRoots>
+                            <rootGrowthRadius>1</rootGrowthRadius>
                             <rootType>Wet</rootType>
                         </li>
                     </value>
@@ -23,8 +23,8 @@
                         <comps>
                             <li Class="Terrascape.CompProperties_RootedPlant">
                                 <root>TS_Root_Cypress</root>
-                                <maxRoots>4</maxRoots>
-                                <rootGrowthRadius>2</rootGrowthRadius>
+                                <maxRoots>2</maxRoots>
+                                <rootGrowthRadius>1</rootGrowthRadius>
                                 <rootType>Wet</rootType>
                             </li>
                         </comps>

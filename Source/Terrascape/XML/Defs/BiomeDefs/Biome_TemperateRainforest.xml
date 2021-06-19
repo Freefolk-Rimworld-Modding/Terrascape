@@ -98,9 +98,9 @@
       </li>
     </terrainPatchMakers>
     <baseWeatherCommonalities>
-      <Clear>6</Clear>
+      <Clear>5</Clear>
       <Fog>12</Fog>
-      <Rain>2</Rain>
+      <Rain>5</Rain>
       <DryThunderstorm>0.3</DryThunderstorm>
       <RainyThunderstorm>2</RainyThunderstorm>
       <FoggyRain>10</FoggyRain>
@@ -108,11 +108,11 @@
       <SnowHard>4</SnowHard>
     </baseWeatherCommonalities>
     <wildPlants>
-      <Plant_Grass>0.1</Plant_Grass>
-      <Plant_TallGrass>0.25</Plant_TallGrass>
+      <Plant_Grass>0.5</Plant_Grass>
+      <Plant_TallGrass>1.0</Plant_TallGrass>
       <Plant_ShrubLow>2.0</Plant_ShrubLow>
       <Plant_Brambles>0.2</Plant_Brambles>
-      <Plant_Moss>10</Plant_Moss>
+      <Plant_Moss>1.0</Plant_Moss>
       <Plant_Dandelion>0.01</Plant_Dandelion>
       <Plant_Bush>0.35</Plant_Bush>
       <Plant_TreePine>2.0</Plant_TreePine>

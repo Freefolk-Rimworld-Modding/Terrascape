@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Abstract="True" Name="TS_FruitFoodRawBase" ParentName="OrganicProductBase">
+    <ingestible>
+      <preferability>RawBad</preferability>
+      <tasteThought>AteRawFood</tasteThought>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>RawVegetable_Eat</ingestSound>
+    </ingestible>
+    <statBases>
+      <Nutrition>0.05</Nutrition>
+      <FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
+    </statBases>
+    <socialPropernessMatters>true</socialPropernessMatters>
+  </ThingDef>
+
+  <!-- Nipa Fruit -->
+  
+  <ThingDef ParentName="TS_FruitFoodRawBase">
+    <defName>TS_RawNipaFruit</defName>
+    <label>nipa palm fruit</label>
+    <description>A woody, globular cluster of nipa palm fruit. Beneath the tough exterior are many small, sweet fruits.</description>
+    <soundInteract>Grain_Drop</soundInteract>
+    <soundDrop>Grain_Drop</soundDrop>
+    <graphicData>
+      <texPath>Things/Items/Raw/TS_RawNipaFruit</texPath>
+    </graphicData>
+    <thingCategories>
+      
+    </thingCategories>
+    <statBases>
+      <MarketValue>1.2</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>15</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+
+    <ingestible>
+      <preferability>RawTasty</preferability>
+      <tasteThought/>
+      <foodType>VegetableOrFruit</foodType>
+    </ingestible>
+  </ThingDef>
+
+</Defs>

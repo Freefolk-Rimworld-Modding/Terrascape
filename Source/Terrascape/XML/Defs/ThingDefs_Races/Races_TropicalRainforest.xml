@@ -501,8 +501,8 @@
 	<!-- ========================== Coati ================================= -->
 
 	<ThingDef ParentName="AnimalThingBase">
-		<defName>TS_LandSnail</defName>
-		<label>giant land snail</label>
+		<defName>TS_TigerSnail</defName>
+		<label>tiger snail</label>
 		<description>A large, herbivorous mollusc with a patterned shell reminiscent of a tiger's stripes. Their beautiful patterns, impressive sizes, and hardy natures have led them to be bred on some worlds for both food and fashion.</description>
 		<statBases>
 			<MoveSpeed>0.5</MoveSpeed>
@@ -517,23 +517,23 @@
 				<power>3</power>
 				<cooldownTime>2</cooldownTime>
 				<linkedBodyPartsGroup>TS_RadulaAttackTool</linkedBodyPartsGroup>
-				<chanceFactor>0.9</chanceFactor>
+				<chanceFactor>0.8</chanceFactor>
 			</li>
 			<li>
 				<label>head</label>
 				<capacities>
 					<li>Blunt</li>
 				</capacities>
-				<power>3</power>
+				<power>2</power>
 				<cooldownTime>2</cooldownTime>
 				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
 				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-				<chanceFactor>0.1</chanceFactor>
+				<chanceFactor>0.2</chanceFactor>
 			</li>
 		</tools>
     <comps>
       <li Class="CompProperties_EggLayer">
-        <eggFertilizedDef>EggLandSnailFertilized</eggFertilizedDef>
+        <eggFertilizedDef>TS_EggTigerSnailFertilized</eggFertilizedDef>
         <eggFertilizationCountMax>1</eggFertilizationCountMax>
         <eggLayIntervalDays>7</eggLayIntervalDays>
         <eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
@@ -542,7 +542,7 @@
     </comps>
 		<race>
       <hasGenders>false</hasGenders>
-			<body>LandSnail</body>
+			<body>TS_Snail</body>
 			<baseBodySize>0.2</baseBodySize>
 			<baseHealthScale>0.5</baseHealthScale>
 			<baseHungerRate>0.2</baseHungerRate>
@@ -580,10 +580,10 @@
 				<li>
 					<def>AnimalAdult</def>
 					<minAge>0.25</minAge>
-					<soundWounded>Pawn_LandSnail_Wounded</soundWounded>
-					<soundDeath>Pawn_LandSnail_Death</soundDeath>
-					<soundCall>Pawn_LandSnail_Call</soundCall>
-					<soundAngry>Pawn_LandSnail_Angry</soundAngry>
+					<soundWounded>TS_Pawn_TigerSnail_Wounded</soundWounded>
+					<soundDeath>TS_Pawn_TigerSnail_Death</soundDeath>
+					<soundCall>TS_Pawn_TigerSnail_Call</soundCall>
+					<soundAngry>TS_Pawn_TigerSnail_Angry</soundAngry>
 				</li>
 			</lifeStageAges>
 			<soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
@@ -596,43 +596,43 @@
 	</ThingDef>
 
 	<PawnKindDef ParentName="AnimalKindBase">
-		<defName>TS_LandSnail</defName>
-		<label>giant land snail</label>
-		<race>TS_LandSnail</race>
+		<defName>TS_TigerSnail</defName>
+		<label>tiger snail</label>
+		<race>TS_TigerSnail</race>
 		<combatPower>10</combatPower>
 		<ecoSystemWeight>0.1</ecoSystemWeight>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Things/Pawn/Animal/LandSnail/LandSnailBaby</texPath>					
+					<texPath>Things/Pawn/Animal/TigerSnail/TigerSnailBaby</texPath>					
 					<drawSize>0.4</drawSize>					
 				</bodyGraphicData>
 				<dessicatedBodyGraphicData>
-					<texPath>Things/Pawn/Animal/LandSnail/Dessicated_LandSnailBaby</texPath>
+					<texPath>Things/Pawn/Animal/TigerSnail/Dessicated_TigerSnailBaby</texPath>
 					<drawSize>0.4</drawSize>
 				</dessicatedBodyGraphicData>
 			</li>
 			<li>
 				<bodyGraphicData>
-					<texPath>Things/Pawn/Animal/LandSnail/LandSnail</texPath>					
+					<texPath>Things/Pawn/Animal/TigerSnail/TigerSnail</texPath>					
 
 					<drawSize>0.6</drawSize>
 
 				</bodyGraphicData>
 				<dessicatedBodyGraphicData>
-					<texPath>Things/Pawn/Animal/LandSnail/Dessicated_LandSnail</texPath>
+					<texPath>Things/Pawn/Animal/TigerSnail/Dessicated_TigerSnail</texPath>
 					<drawSize>0.6</drawSize>
 				</dessicatedBodyGraphicData>
 			</li>
 			<li>
 				<bodyGraphicData>
-					<texPath>Things/Pawn/Animal/LandSnail/LandSnail</texPath>					
+					<texPath>Things/Pawn/Animal/TigerSnail/TigerSnail</texPath>					
 
 					<drawSize>0.75</drawSize>
 
 				</bodyGraphicData>
 				<dessicatedBodyGraphicData>
-					<texPath>Things/Pawn/Animal/LandSnail/Dessicated_LandSnail</texPath>
+					<texPath>Things/Pawn/Animal/TigerSnail/Dessicated_TigerSnail</texPath>
 					<drawSize>0.75</drawSize>
 				</dessicatedBodyGraphicData>
 			</li>
