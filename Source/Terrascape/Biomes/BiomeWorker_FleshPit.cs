@@ -35,7 +35,7 @@ namespace Terrascape
 			{
 				return 0f;
 			}
-			return 40f;
+			return 50f;
 		}
     }
 }
