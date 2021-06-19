@@ -110,29 +110,29 @@
         <label>quail chick</label>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/Quail/QuailChick</texPath>
-          <drawSize>0.45</drawSize>
+          <drawSize>0.40</drawSize>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/Chicken/Dessicated_Chick</texPath>
-          <drawSize>0.45</drawSize>
+          <drawSize>0.40</drawSize>
         </dessicatedBodyGraphicData>
       </li>
       <li>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/Quail/Quail</texPath>
-          <drawSize>0.75</drawSize>
+          <drawSize>0.65</drawSize>
         </bodyGraphicData>
         <femaleGraphicData>
           <texPath>Things/Pawn/Animal/Quail/Quail</texPath>
-          <drawSize>0.73</drawSize>
+          <drawSize>0.63</drawSize>
         </femaleGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/Quail/Dessicated_Quail</texPath>
-          <drawSize>0.75</drawSize>
+          <drawSize>0.65</drawSize>
         </dessicatedBodyGraphicData>
         <femaleDessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/Quail/Dessicated_Quail</texPath>
-          <drawSize>0.73</drawSize>
+          <drawSize>0.63</drawSize>
         </femaleDessicatedBodyGraphicData>
       </li>
       <li>
