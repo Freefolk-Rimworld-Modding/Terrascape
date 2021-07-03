@@ -62,6 +62,8 @@ namespace Terrascape
 
 		// Animal Tweaks
 
+		public static bool enableAnimalForaging = true;
+
 		public static bool enablePredatorHealing = true;
 
 		public override void ExposeData()
@@ -71,6 +73,7 @@ namespace Terrascape
 			Scribe_Values.Look(ref spawnXericShrubland, "spawnXericShrubland", defaultValue: true);
 			Scribe_Values.Look(ref spawnFleshPit, "spawnFleshPit", defaultValue: true);
 			Scribe_Values.Look(ref enablePredatorHealing, "enablePredatorHealing", defaultValue: true);
+			Scribe_Values.Look(ref enableAnimalForaging, "enableAnimalForaging", defaultValue: true);
 		}
 	}	
 }

@@ -31,7 +31,7 @@
   <ThingDef ParentName="TreeBase">
     <defName>TS_NipaPalmTree</defName>
     <label>nipa palm tree</label>
-    <description>A palm tree with leaves that seem to sprout from the ground, found around brackish water. It produces sweet fruit year-round.</description>
+    <description>A salt-tolerant tree with broad leaves that sprout from its underground trunk. Its fruit is sweet - if you can get through the tough, woody shell.</description>
     <graphicData>
       <texPath>Things/Plant/Trees/TS_TreeNipaPalm</texPath>
       <graphicClass>Graphic_Random</graphicClass>
